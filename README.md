@@ -1,9 +1,10 @@
 # Degrees-AI
 An AI program that determines how many "degrees of separation" apart two actors are.
 
+(this is a harvard homework/project)
 In this program, we're interested in finding the shortest path between any two actors by choosing a sequence of movies that connects them. For example, the shortest path between Jennifer Lawrence and Tom Hanks is 2: Jennifer Lawrence is connected to Kevin Bacon by both starring in "X-Men: First Class" and Kevin Bacon is connected to Tom Hanks by both starring in "Apollo 13".
 
-The distribution code contains two sets of CSV data files: one set in the large directory and one set in the small directory. Each contains files with the same names, and the same structure, but small is a much smaller dataset for ease of testing and experimentation.
+The distribution code contains two sets of CSV data files: one set in the large directory and one set in the small directory. Each contains files with the same names, and the same structure, but small is a much smaller dataset for ease of testing and experimentation.(i didn't load the large directory because the files were too large)
 
 Each dataset consists of three CSV files. A CSV file, if unfamiliar, is just a way of organizing data in a text-based format: each row corresponds to one data entry, with commas in the row separating the values for that entry.
 
