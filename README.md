@@ -9,7 +9,11 @@ O código de distribuição contém dois conjuntos de arquivos de dados CSV: um 
 
 Cada conjunto de dados consiste em três arquivos CSV.
 
-Abra small/people.csv. Você verá que cada pessoa tem um id único, correspondendo ao id dela no banco de dados do IMDb. Elas também têm um nome e um ano de nascimento. Em seguida, abra small/movies.csv. Você verá aqui que cada filme também tem um id único, além de um título e o ano em que o filme foi lançado. Agora, abra small/stars.csv. Este arquivo estabelece uma relação entre as pessoas em people.csv e os filmes em movies.csv. Cada linha é um par de valores person_id e movie_id. A primeira linha (ignorando o cabeçalho), por exemplo, indica que a pessoa com id 102 estrelou no filme com id 104257. Checando isso em people.csv e movies.csv, você descobrirá que essa linha está dizendo que Kevin Bacon estrelou no filme “A Few Good Men.” 
+Abra small/people.csv. Você verá que cada pessoa tem um id único, correspondendo ao id dela no banco de dados do IMDb. Elas também têm um nome e um ano de nascimento. 
+
+Em seguida, abra small/movies.csv. Você verá aqui que cada filme também tem um id único, além de um título e o ano em que o filme foi lançado. 
+
+Agora, abra small/stars.csv. Este arquivo estabelece uma relação entre as pessoas em people.csv e os filmes em movies.csv. Cada linha é um par de valores person_id e movie_id. A primeira linha (ignorando o cabeçalho), por exemplo, indica que a pessoa com id 102 estrelou no filme com id 104257. Checando isso em people.csv e movies.csv, você descobrirá que essa linha está dizendo que Kevin Bacon estrelou no filme “A Few Good Men.” 
 
 Em seguida, dê uma olhada em degrees.py. No topo, várias estruturas de dados são definidas para armazenar informações dos arquivos CSV. O dicionário names é uma forma de procurar uma pessoa pelo nome: ele mapeia nomes para um conjunto de ids correspondentes(porque é possível que múltiplos atores tenham o mesmo nome). O dicionário de pessoas mapeia o id de cada pessoa para outro dicionário com valores para o nome da pessoa, ano de nascimento e o conjunto de todos os filmes em que ela atuou. E o dicionário de filmes mapeia o id de cada filme para outro dicionário com valores para o título do filme, ano de lançamento e o conjunto de todas as estrelas do filme. A função load_data carrega os dados dos arquivos CSV nessas estruturas de dados. 
 
