@@ -1,11 +1,31 @@
 # Degrees-AI
+**(Descrição em Português)**
+
+Um programa de IA que determina quantos "graus de separação" existem entre dois atores.
+
+Neste programa, estamos interessados em encontrar o caminho mais curto entre dois atores escolhendo uma sequência de filmes que os conectem. Por exemplo, o caminho mais curto entre Jennifer Lawrence e Tom Hanks é 2: Jennifer Lawrence está conectada a Kevin Bacon por ambos atuarem em "X-Men: Primeira Classe" e Kevin Bacon está conectado a Tom Hanks por ambos atuarem em "Apollo 13".
+
+O código de distribuição contém dois conjuntos de arquivos de dados CSV: um conjunto no diretório grande e outro conjunto no diretório pequeno. Cada um contém arquivos com os mesmos nomes e a mesma estrutura, mas o conjunto pequeno é muito menor para facilitar o teste e a experimentação. (Eu não carreguei o diretório grande porque os arquivos eram muito grandes)
+
+Cada conjunto de dados consiste em três arquivos CSV.
+
+Abra small/people.csv. Você verá que cada pessoa tem um id único, correspondendo ao id dela no banco de dados do IMDb. Elas também têm um nome e um ano de nascimento. Em seguida, abra small/movies.csv. Você verá aqui que cada filme também tem um id único, além de um título e o ano em que o filme foi lançado. Agora, abra small/stars.csv. Este arquivo estabelece uma relação entre as pessoas em people.csv e os filmes em movies.csv. Cada linha é um par de valores person_id e movie_id. A primeira linha (ignorando o cabeçalho), por exemplo, indica que a pessoa com id 102 estrelou no filme com id 104257. Checando isso em people.csv e movies.csv, você descobrirá que essa linha está dizendo que Kevin Bacon estrelou no filme “A Few Good Men.” 
+
+Em seguida, dê uma olhada em degrees.py. No topo, várias estruturas de dados são definidas para armazenar informações dos arquivos CSV. O dicionário names é uma forma de procurar uma pessoa pelo nome: ele mapeia nomes para um conjunto de ids correspondentes(porque é possível que múltiplos atores tenham o mesmo nome). O dicionário de pessoas mapeia o id de cada pessoa para outro dicionário com valores para o nome da pessoa, ano de nascimento e o conjunto de todos os filmes em que ela atuou. E o dicionário de filmes mapeia o id de cada filme para outro dicionário com valores para o título do filme, ano de lançamento e o conjunto de todas as estrelas do filme. A função load_data carrega os dados dos arquivos CSV nessas estruturas de dados. 
+
+A função principal neste programa primeiro carrega os dados na memória (o diretório de onde os dados são carregados pode ser especificado por um argumento de linha de comando). Em seguida, a função solicita que o usuário digite dois nomes. A função person_id_for_name recupera o id de qualquer pessoa (e lida com a solicitação ao usuário para esclarecer, no caso de múltiplas pessoas terem o mesmo nome). A função então chama a função shortest_path para calcular o caminho mais curto entre as duas pessoas e imprime o caminho.
+
+
+
+**(English Description)**
+
 An AI program that determines how many "degrees of separation" apart two actors are.
 
 In this program, we're interested in finding the shortest path between any two actors by choosing a sequence of movies that connects them. For example, the shortest path between Jennifer Lawrence and Tom Hanks is 2: Jennifer Lawrence is connected to Kevin Bacon by both starring in "X-Men: First Class" and Kevin Bacon is connected to Tom Hanks by both starring in "Apollo 13".
 
 The distribution code contains two sets of CSV data files: one set in the large directory and one set in the small directory. Each contains files with the same names, and the same structure, but small is a much smaller dataset for ease of testing and experimentation.(i didn't load the large directory because the files were too large)
 
-Each dataset consists of three CSV files. A CSV file, if unfamiliar, is just a way of organizing data in a text-based format: each row corresponds to one data entry, with commas in the row separating the values for that entry.
+Each dataset consists of three CSV files.
 
 Open up small/people.csv. You’ll see that each person has a unique id, corresponding with their id in IMDb’s database. They also have a name, and a birth year.
 
