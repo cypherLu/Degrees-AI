@@ -5,7 +5,7 @@ Um programa de IA que determina quantos "graus de separação" existem entre doi
 
 Neste programa, estamos interessados em encontrar o caminho mais curto entre dois atores escolhendo uma sequência de filmes que os conectem. Por exemplo, o caminho mais curto entre Jennifer Lawrence e Tom Hanks é 2: Jennifer Lawrence está conectada a Kevin Bacon por ambos atuarem em "X-Men: Primeira Classe" e Kevin Bacon está conectado a Tom Hanks por ambos atuarem em "Apollo 13".
 
-O código de distribuição contém um conjunto de arquivos de dados CSV: um conjunto pequeno para facilitar o teste e a experimentação.
+O código de distribuição contém dois conjuntos de arquivos de dados CSV: um conjunto no diretório grande(large) e um conjunto no diretório pequeno(small). Cada um contém arquivos com os mesmos nomes e a mesma estrutura, mas o conjunto pequeno é um conjunto de dados muito menor para facilitar os testes. (dentro do diretório large, compactei o arquivo people.csv em uma pasta zip pois o arquivo era muito grande para carregar aqui, maior que 25MB)
 
 Cada conjunto de dados consiste em três arquivos CSV.
 
@@ -27,7 +27,8 @@ An AI program that determines how many "degrees of separation" apart two actors 
 
 In this program, we're interested in finding the shortest path between any two actors by choosing a sequence of movies that connects them. For example, the shortest path between Jennifer Lawrence and Tom Hanks is 2: Jennifer Lawrence is connected to Kevin Bacon by both starring in "X-Men: First Class" and Kevin Bacon is connected to Tom Hanks by both starring in "Apollo 13".
 
-The distribution code contains a set of CSV data files: a small dataset for ease of testing and experimentation.
+The distribution code contains two sets of CSV data files: one set in the large directory and one set in the small directory. Each contains files with the same names, and the same structure, but small is a much smaller dataset for ease of testing and experimentation. (inside the large directory, I compressed the file people.csv into a zip folder because the file was too large to upload here, larger than 25MB)
+
 Each dataset consists of three CSV files.
 
 Open up small/people.csv. You’ll see that each person has a unique id, corresponding with their id in IMDb’s database. They also have a name, and a birth year.
