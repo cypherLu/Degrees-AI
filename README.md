@@ -19,6 +19,8 @@ Em seguida, dê uma olhada em degrees.py. No topo, várias estruturas de dados s
 
 A função principal neste programa primeiro carrega os dados na memória (o diretório de onde os dados são carregados pode ser especificado por um argumento de linha de comando). Em seguida, a função solicita que o usuário digite dois nomes. A função person_id_for_name recupera o id de qualquer pessoa (e lida com a solicitação ao usuário para esclarecer, no caso de múltiplas pessoas terem o mesmo nome). A função então chama a função shortest_path para calcular o caminho mais curto entre as duas pessoas e imprime o caminho.
 
+rode degrees.py para testar
+
 
 
 **(English Description)**
@@ -40,3 +42,5 @@ Now, open up small/stars.csv. This file establishes a relationship between the p
 Next, take a look at degrees.py. At the top, several data structures are defined to store information from the CSV files. The names dictionary is a way to look up a person by their name: it maps names to a set of corresponding ids (because it’s possible that multiple actors have the same name). The people dictionary maps each person’s id to another dictionary with values for the person’s name, birth year, and the set of all the movies they have starred in. And the movies dictionary maps each movie’s id to another dictionary with values for that movie’s title, release year, and the set of all the movie’s stars. The load_data function loads data from the CSV files into these data structures.
 
 The main function in this program first loads data into memory (the directory from which the data is loaded can be specified by a command-line argument). Then, the function prompts the user to type in two names. The person_id_for_name function retrieves the id for any person (and handles prompting the user to clarify, in the event that multiple people have the same name). The function then calls the shortest_path function to compute the shortest path between the two people, and prints out the path.
+
+run degrees.py to test the program
